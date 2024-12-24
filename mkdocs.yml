@@ -1,0 +1,24 @@
+site_name: Blog
+site_url: https://www.oitswilliam.com/blog
+
+theme:
+  name: material
+  custom_dir: overrides
+  features:
+
+markdown_extensions:
+  - footnotes
+  - abbr
+  - admonition
+  - attr_list
+plugins:
+    - blog:
+        blog_dir: .
+    - search
+    - social
+    - tags
+extra_css:
+  - stylesheets/extra.css
+
+copyright: |
+    Copyright &copy; 2024- Oitswilliam Pang. All rights reserved.
