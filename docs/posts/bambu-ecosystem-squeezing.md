@@ -13,13 +13,13 @@ authors:
 
 # Bambu ecosystem squeezing, or is it?
 
-Today is a talk about not just recent, but what I think is the biggest controversy that's bigger than A1 wire burning; its security enhancements. Bambu claims that this will reduce remote attacks and exposures, and my thought, is in case if someone is stupid enough to open it via port forwarding. But people think it's a step ahead of squeezing the open ecosystem.
+Today is a talk about not just recent, but what I think is the biggest controversy that's bigger than A1 wire burning; its security enhancements, called Authorization Control System. Bambu claims that this will reduce remote attacks and exposures, and my thought, is in case if someone is stupid enough to open it via port forwarding. But people think it's a step ahead of squeezing the open ecosystem.
 
-- Note that I am a [proud owner of Bambu's A1 Mini 3D printer](https://www.facebook.com/share/v/1Z2qqtiCfu/),  has two Voron printers (V2.3347 and V0.2378), but uses the normal Bambu Studio as it is ok to me. Other printers such as UltiMaker S3 and the *already-dead* idbox 3D printer that uses another slicer called UltiMaker Cura. And I am now designing a self-designed printer that is based of Voron Trident and FrankenVoron Tridex.
+- Note that I am a [proud owner of Bambu's A1 Mini 3D printer](https://www.facebook.com/share/v/1Z2qqtiCfu/),  has two Voron printers (V2.3347 and V0.2378), but uses the normal Bambu Studio as it is ok to me. Other printers such as UltiMaker S3 and the 7-year old but *short-lived* idbox 3D printer that uses another slicer called UltiMaker Cura. And I am now designing a self-designed printer that is based of Voron Trident and FrankenVoron Tridex.
 
 ## Before this, let's take a look at other, valid controversies
 
-* Bambu Lab sued by Stratasys with 8 patents, with half of them intended to troll Bambu and one of it being the same patent. [least controversal, but still ongoing]
+* Bambu Lab sued by Stratasys with 8 patents, with half of them intended to troll Bambu and one of it being the same patent. [hope it's least controversal, but still ongoing]
 * A1 wire burn [was the biggest before, addressed within two months].
     * The bed wire will burn if not properly bent. At least Bambu Lab recalled all pre-addressed A1 printers after two cases.
     * New batches after recall has addressed bed wires that no longer cause unintended burns.
@@ -30,6 +30,10 @@ Today is a talk about not just recent, but what I think is the biggest controver
     * The ceramic heater can add resistance and resist generation under heat. For this in X1 and P1, the ceramic heater can heat up to around 400˚C before it no longer heats due to excessive resistance. Although it's still high, it's better than the standard heater cartridge where it can glow so insane that it melt the aluminum off.
     * This was before any A-line printers release, but anyway, in A1 line of printers, and the future non-A-line printers that will use hotends for the A-line, they will predict if the hotend is present, and if it detects that the temperature rises up abnormally, it will stop heating. That is if you don't enable maintenance mode.
 * Bambu Studio was based of PrusaSlicer [addressed].
+
+## Now let's get back to current
+
+The Authorization Control System is a feature that lets printer require keys before being controlled, It can only be from first-party slicer app and companion apps (unless otherwise if they change decisions). This feature does *not* limit statistical interactions or starting a print job that's already on the card, among other things, but it limits control-related interactions and other critical operations. Users who do not want this feature can keep their firmware, but not if they received the printer with this firmware from start, cause this does *not* let them downgrade the firmware.
 
 ## Why did it became controversal?
 
@@ -43,7 +47,7 @@ People have said that this is a step ahead of becoming the HP (inkjet) printers 
 
 ### [Easy reverse engineering](https://wiki.rossmanngroup.com/index.php?title=Bambu_Lab_Authorization_Control_System)
 
-Since Bambu Connect used Electron as it's base, and not using in-house encryption, people have figured out [how to crack down the keys used by Bambu Connect, within a day of it's beta release](https://www.reddit.com/r/BambuLab/comments/1i4k9m2/bambuconnect_has_been_pwned/?rdt=64645). And has been shared to the wiki that's against companies abusing their customers. The key might be rotated later.
+Since Bambu Connect used Electron as it's base, and not using in-house encryption, people have figured out [how to crack down the keys used by Bambu Connect, within a day of it's beta release](https://www.reddit.com/r/BambuLab/comments/1i4k9m2/bambuconnect_has_been_pwned/). And has been shared to the wiki that's against companies abusing their customers. The key might be rotated later.
 
 ### Dated terms
 
@@ -64,3 +68,4 @@ Maybe this feature was made for users who have zero knowledge of networking, but
 If you have things to point out, please send message on my Facebook [page](https://www.facebook.com/officialbunny350/), or email me yo [at] oitswilliam [dot] com.
 
 *Short update*: add new links, clarify ownership and add suggestion information
+*Short update 2*: forgot to add introduction and forgot about the actual name yeesh
