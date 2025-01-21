@@ -1,6 +1,7 @@
 ---
 date:
   created: 2025-01-21
+  updated: 2025-01-21
 tags:
   - reactions
   - ecosystem
@@ -13,6 +14,8 @@ authors:
 # Bambu ecosystem squeezing, or is it?
 
 Today is a talk about not just recent, but what I think is the biggest controversy that's bigger than A1 wire burning; its security enhancements. Bambu claims that this will reduce remote attacks and exposures, and my thought, is in case if someone is stupid enough to open it via port forwarding. But people think it's a step ahead of squeezing the open ecosystem.
+
+- Note that I am a [proud owner of Bambu's A1 Mini 3D printer](https://www.facebook.com/share/v/1Z2qqtiCfu/),  has two Voron printers (V2.3347 and V0.2378), but uses the normal Bambu Studio as it is ok to me. Other printers such as UltiMaker S3 and the *already-dead* idbox 3D printer that uses another slicer called UltiMaker Cura. And I am now designing a self-designed printer that is based of Voron Trident and FrankenVoron Tridex.
 
 ## Before this, let's take a look at other, valid controversies
 
@@ -40,11 +43,11 @@ People have said that this is a step ahead of becoming the HP (inkjet) printers 
 
 ### [Easy reverse engineering](https://wiki.rossmanngroup.com/index.php?title=Bambu_Lab_Authorization_Control_System)
 
-Since Bambu Connect used Electron as it's base, and not using in-house encryption, people have figured out how to crack down the keys used by Bambu Connect, within a day of it's beta release. And has been shared to the wiki that's against companies abusing their customers. The key might be rotated later.
+Since Bambu Connect used Electron as it's base, and not using in-house encryption, people have figured out [how to crack down the keys used by Bambu Connect, within a day of it's beta release](https://www.reddit.com/r/BambuLab/comments/1i4k9m2/bambuconnect_has_been_pwned/?rdt=64645). And has been shared to the wiki that's against companies abusing their customers. The key might be rotated later.
 
 ### Dated terms
 
-[Louis flamed the responsibility of baseless allegations back to Bambu](https://www.youtube.com/watch?v=W6MybDJfmmY) when he got gaslit by the list of things that Bambu will not do when compared the ToU.
+[Louis flamed the responsibility of baseless allegations back to Bambu](https://www.youtube.com/watch?v=W6MybDJfmmY) when he got gaslit by the list of things that Bambu will not do when compared with the ToU.
 
 I have pointed out that section 7.4 of the terms of use has explicitly said that users may no longer send new print jobs if new (stable, not beta) updates are found, but on the blog post regarding the controversy said (let's just say) this update is optional. This has confused a lot of people into thinking to update, per ToU, or not, for the sake of third-party integrations.
 
@@ -57,3 +60,7 @@ Currently, I doubt it, but they have addressed most problems including solving L
 They are also ready to talk with accessory vendors on gaining such restricted features.
 
 Maybe this feature was made for users who have zero knowledge of networking, but still I doubt if this feature actually work against brute-force attack or something like that.
+
+If you have things to point out, please send message on my Facebook [page](https://www.facebook.com/officialbunny350/), or email me yo [at] oitswilliam [dot] com.
+
+*Short update*: add new links, clarify ownership and add suggestion information
