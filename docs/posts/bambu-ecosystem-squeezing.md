@@ -1,7 +1,7 @@
 ---
 date:
   created: 2025-01-21
-  updated: 2025-01-21
+  updated: 2025-01-22
 tags:
   - reactions
   - ecosystem
@@ -51,7 +51,7 @@ Since Bambu Connect used Electron as it's base, and not using in-house encryptio
 
 ### Dated terms
 
-[Louis flamed the responsibility of baseless allegations back to Bambu](https://www.youtube.com/watch?v=W6MybDJfmmY) when he got gaslit by the list of things that Bambu will not do when compared with the ToU.
+[Louis flamed the responsibility of baseless allegations back to Bambu](https://www.youtube.com/watch?v=W6MybDJfmmY) when he got gaslit by Bambu's tactics of trying to remove archives captured by third-parties and the list of things that Bambu will not do when compared with the ToU.
 
 I have pointed out that section 7.4 of the terms of use has explicitly said that users may no longer send new print jobs if new (stable, not beta) updates are found, but on the blog post regarding the controversy said (let's just say) this update is optional. This has confused a lot of people into thinking to update, per ToU, or not, for the sake of third-party integrations.
 
@@ -69,3 +69,4 @@ If you have things to point out, please send message on my Facebook [page](https
 
 *Short update*: add new links, clarify ownership and add suggestion information
 *Short update 2*: forgot to add introduction and forgot about the actual name yeesh
+*Update on January 22*: specified new reason on why Louis got gaslit
