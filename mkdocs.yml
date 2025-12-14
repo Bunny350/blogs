@@ -2,22 +2,50 @@ site_name: Blog
 site_url: https://www.oitswilliam.com/blog
 
 theme:
-  name: material
-  custom_dir: overrides
-  features:
+    name: material
+    logo: assets/oitswilliam.svg
+    font: false
+    custom_dir: overrides
+    features:
+    palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Auto - system set
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      toggle:
+        icon: material/brightness-7
+        name: Light
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Dark
 
 markdown_extensions:
   - footnotes
   - abbr
   - admonition
   - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
 plugins:
     - blog:
         blog_dir: .
         archive_date_format: MMMM yyyy
         archive_url_date_format: yyyy/MM
         post_readtime: false
-        draft_on_serve: false
+        draft: true
         draft_if_future_date: true
     - search
     - social

@@ -1,0 +1,34 @@
+{% extends "main.html" %}
+
+<!-- Page content -->
+{% block container %}
+  <div class="md-content" data-md-component="content">
+    <div class="md-content__inner">
+
+      <!-- Header -->
+      <header class="md-typeset">
+        {% if ("./" in page.url | url) and (("category" in page.url) or ("archive" in page.url)) %}
+            {{ page.content }}
+            <p>
+            {% set page_id = (page.url | replace('/', '') | replace('category', '')) %}
+            {% if ("category" in page.url) %}
+            {{ lang.t(page_id + '.description') }}
+            {% endif %}
+            </p>
+        {% endif %}
+      </header>
+
+      <!-- Posts -->
+      {% for post in posts %}
+        {% include "partials/post.html" %}
+      {% endfor %}
+
+      <!-- Pagination -->
+      {% if pagination %}
+        {% block pagination %}
+          {% include "partials/pagination.html" %}
+        {% endblock %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

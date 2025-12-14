@@ -1,0 +1,55 @@
+<div class="md-post__meta md-meta">
+  <ul class="md-meta__list">
+      {% if page.authors %}
+          <li class="md-meta__item">
+              {% for author in page.authors %}
+                      {% if author.url %}
+                      {{ lang.t("blog.by") }} <a href="{{ author.url | url }}">{{ author.name }}</a>
+                      {% else %}
+                      {{ lang.t("blog.by") }} {{ author.name }}
+                      {% endif %}
+              {% endfor %}
+          </li>
+      {% endif %}
+    <li class="md-meta__item">
+        <time datetime="{{ page.config.date.created }}" class="md-ellipsis">
+            {{ lang.t("blog.created_on") }} {{- page.config.date.created | date -}}
+        </time>
+    </li>
+    {% if page.config.date.updated %}
+      <li class="md-meta__item">
+          <time datetime="{{ page.config.date.updated }}" class="md-ellipsis">
+              {{ lang.t("blog.updated_on") }} {{- page.config.date.updated | date -}}
+          </time>
+      </li>
+    {% endif %}
+    {% if page.categories %}
+      <li class="md-meta__item">
+          <span class="md-ellipsis">
+            {{ lang.t("blog.categories.in") }}
+            {% for category in page.categories %}
+              <a class="md-meta__link" href="{{ category.url | url }}">
+                {{- category.title -}}
+              </a>
+              {%- if loop.revindex > 1 %}, {% endif -%}
+            {% endfor -%}
+          </span>
+      </li>
+    {% endif %}
+    {% if page.config.readtime %}
+      {% set time = page.config.readtime %}
+      <li class="md-meta__item">
+          <span class="md-ellipsis">
+            {% if time == 1 %}
+              {{ lang.t("readtime.one") }}
+            {% else %}
+              {{ lang.t("readtime.other") | replace("#", time) }}
+            {% endif %}
+          </span>
+      </li>
+    {% endif %}
+  </ul>
+  {% if page.meta.psa %}
+  <div id="blog-psa-full"><span class="blog-psa-title">{{ lang.t("blog.note.public-service-announcement") }}</span></div>
+  {% endif %}
+</div>

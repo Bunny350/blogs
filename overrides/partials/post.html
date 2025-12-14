@@ -1,0 +1,91 @@
+<article class="md-post md-post--excerpt">
+        {% if post.meta.hero %}
+            <div class="blog-flex allow-border">
+            {% else %}
+            <div class="blog-flex">
+        {% endif %}
+        <a class="link-wrapper" href="{{ post.url | url }}"></a>
+        {% if post.meta.hero %}
+        <div class="hero-image">
+            <a href="{{ post.url | url }}">
+                <img src="{{ post.meta.hero }}" />
+            </a>
+            </div>
+        {% else %}
+        <div class="blank-spacing"> </div>
+        {% endif %}
+        {% if post.meta.hero %}
+        <div class="text_content">
+        {% else %}
+        <div class="text_content allow-border">
+        {% endif %}
+            <header class="md-post__header">
+            <div class="md-post__meta md-meta">
+                <ul class="md-meta__list">
+                    {% if post.meta.psa %}
+                    <li class="md-meta__item">
+                        <span class="blog-psa-title"> {{ lang.t("blog.note.public-service-announcement")}}</span>
+                        </li>
+                    {% endif %}
+                    <li class="md-meta__item">
+                        {% if post.authors %}
+                        {% for author in post.authors %}
+                        {{ lang.t("blog.by") }} {{ author.name }}
+                        {% endfor %}
+                        {% endif %}
+                    </li>
+                    <li class="md-meta__item">
+                        <time datetime="{{ post.config.date.created }}">
+                            {{- post.config.date.created | date -}}
+                        </time>
+                        {#- Collapse whitespace -#}
+                    </li>
+                    {% if post.categories %}
+                    <li class="md-meta__item">
+                        {{ lang.t("blog.categories.in") }}
+                        {% for category in post.categories %}
+                        <a href="{{ category.url | url }}" class="md-meta__link">
+                            {{- category.title -}}
+                        </a>
+                        {%- if loop.revindex > 1 %}, {% endif -%}
+                        {% endfor -%}
+                    </li>
+                    {% endif %}
+                    {% if post.config.readtime %}
+                    {% set time = post.config.readtime %}
+                    <li class="md-meta__item">
+                        {% if time == 1 %}
+                        {{ lang.t("readtime.one") }}
+                        {% else %}
+                        {{ lang.t("readtime.other") | replace("#", time) }}
+                        {% endif %}
+                    </li>
+                    {% endif %}
+                
+                {% if post.config.pin %}
+                  <span class="md-pin"></span>
+                {% endif %}
+              </ul>
+                
+                {% if post.config.draft %}
+                <span class="md-draft">
+                    {{ lang.t("blog.draft") }}
+                </span>
+                {% endif %}
+            </div>
+            </header>
+            <div class="md-post__content md-typeset">
+                {{ post.content }}
+                </nav>
+                {% if post.more %}
+                <nav class="md-post__action">
+                    <a href="{{ post.url | url }}">
+                        {{ lang.t("blog.continue") }}
+                    </a>
+                </nav>
+                {% endif %}
+            </div>
+        </div>
+        <div class="blank-spacing"></div>
+        </div>
+</article>

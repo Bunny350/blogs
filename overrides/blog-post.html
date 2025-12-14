@@ -1,0 +1,15 @@
+{% extends "main.html" %}
+{% block container %}
+  <div class="md-content md-content--post" data-md-component="content">
+    <article class="md-content__inner">
+      {% block metadataviewer %}
+      {% include "partials/oiwp-metadata.html" %}
+      {% endblock %}
+      <span class="md-typeset">
+      {% block content %}
+        {% include "partials/content.html" %}
+      {% endblock %}
+      </span>
+    </article>
+  </div>
+{% endblock %}

@@ -1,0 +1,144 @@
+<div class="container-element footer main website-width">
+    <div class="hide-on-mobile" style="flex-direction: column">
+        <div class="navbutton-box">
+        <a href="javascript:void(0)" onclick="changeNav()" id="changeFooterNav" class="navbutton">Browse main pages</a>
+        </div>
+            <div class="footer-left-nav-limiter">
+                        <div id="mainweb-nav">
+                        {% include "partials/oiwp-footer-mainlinks.html" %} </div>
+                        <div id="blog-nav">
+                        {% include "partials/oiwp-footer-bloglinks.html" %}  </div>
+                </div>
+    <script>
+        const blogNavUX = document.getElementById("blog-nav");
+        const mainNavUX = document.getElementById("mainweb-nav");
+        const changeNavButton = document.getElementById("changeFooterNav");
+        function changeNav() {
+            if (!blogNavUX.className.includes("matically-shoved")) {
+                // shove blog navigation away and show main pages
+                changeNavButton.className += " transparent";
+                blogNavUX.className = "matically-shoved ";
+                mainNavUX.className = "matically-shown";
+                setTimeout(function() {
+                    changeNavButton.innerHTML = "Browse blog posts";
+                    changeNavButton.className = "navbutton"
+                    }, 200);
+                setTimeout(function() {
+                    if (blogNavUX.className.includes("matically-shoved") && !blogNavUX.className.includes("matically-hidden")) {
+                        blogNavUX.className += "matically-hidden";
+                        console.log("blog nav hidden");
+                    } else {
+                        console.log("blog nav not shoved, ignoring")
+                    }
+                }, 300);
+              console.log("blog nav hiding");
+              } else {
+                  // get blog navigation back and hide main pages
+                  var hidingVar = new RegExp('(\\s|^)' + "matically-hidden" + '(\\s|$)');
+                  blogNavUX.className = blogNavUX.className.replace(hidingVar, ' '); // from https://stackoverflow.com/questions/26736587/how-to-add-and-remove-classes-in-javascript-without-jquery but more primitive
+                  setTimeout(function() {
+                      if (!blogNavUX.className.includes("matically-hidden")) {
+                      var shovingVar = new RegExp('(\\s|^)' + "matically-shoved" + '(\\s|$)');
+                      blogNavUX.className = blogNavUX.className.replace(shovingVar, ' ');
+                      changeNavButton.className += " transparent";
+                      console.log("blog nav moving in");
+                      }
+                      }, 1);
+                  setTimeout(function() {
+                      changeNavButton.innerHTML = "Browse main pages";
+                      changeNavButton.className = "navbutton"
+                      }, 200);
+                  setTimeout(function() {
+                      if (!blogNavUX.className.includes("matically-shoved") && !blogNavUX.className.includes("matically-hidden")) {
+                      var showingVar = new RegExp('(\\s|^)' + "matically-shown" + '(\\s|$)');
+                      mainNavUX.className = mainNavUX.className.replace(showingVar, ' ');
+                      console.log("main nav hidden");
+                  } else {
+                      console.log("blog nav not shoved, ignoring")
+                  }
+                  }, 300);
+        
+                  console.log("blog nav shown");
+              }
+            }
+        
+        </script>
+    </div>
+
+    <div class="container-element social-links"><h2>Follow Oitswilliam Pang now on:</h2>
+        {% include "partials/social_media_icons.html" %}
+        <div class="bottomnav-links">
+            <p>Oitswilliam is always active on own Facebook account.</p>
+            <p>Join <a href="https://discord.gg/Cu6e9ra">Oitswilliam Pang Discord Server</a><br></p>
+            <a href="javascript:void(0)" onclick="forceChangeNav()"><p>View blog posts</p></a>
+            <p><a href="/media.html" class="">View other links</a></p>
+        </div>
+        
+        <script>
+        function forceChangeNav() {
+            const blogNavUX = document.getElementById("blog-nav");
+            const mainNavUX = document.getElementById("mainweb-nav");
+            const changeNavButton = document.getElementById("changeFooterNav");
+            if (!mainNavUX.className.includes("matically-shown")) {
+                window.scrollTo(0, 0)
+                window.location.reload()
+              } else {
+                  var hidingVar = new RegExp('(\\s|^)' + "matically-hidden" + '(\\s|$)');
+                  blogNavUX.className = blogNavUX.className.replace(hidingVar, ' '); // from https://stackoverflow.com/questions/26736587/how-to-add-and-remove-classes-in-javascript-without-jquery but more primitive
+                  setTimeout(function() {
+                      if (!blogNavUX.className.includes("matically-hidden")) {
+                      var shovingVar = new RegExp('(\\s|^)' + "matically-shoved" + '(\\s|$)');
+                      blogNavUX.className = blogNavUX.className.replace(shovingVar, ' ');
+                      changeNavButton.className += " transparent";
+                      console.log("blog nav moving in");
+                      }
+                      }, 1);
+                  setTimeout(function() {
+                      changeNavButton.innerHTML = "Browse main pages";
+                      changeNavButton.className = "navbutton"
+                      }, 200);
+                  setTimeout(function() {
+                      if (!blogNavUX.className.includes("matically-shoved") && !blogNavUX.className.includes("matically-hidden")) {
+                      var showingVar = new RegExp('(\\s|^)' + "matically-shown" + '(\\s|$)');
+                      mainNavUX.className = mainNavUX.className.replace(showingVar, ' ');
+                      console.log("main nav hidden");
+                  } else {
+                      console.log("blog nav not shoved, ignoring")
+                  }
+                  }, 300);
+        
+                  console.log("blog nav shown");
+              }
+            }
+        </script>
+    </div>
+<div class="theme-chooser-relocate footer-righthand">
+    <p>Theme chooser:</p>
+    {% if config.theme.palette %}
+      {% if not config.theme.palette is mapping %}
+        {% include "partials/palette.html" %}
+      {% endif %}
+    {% endif %}
+    {% if not config.theme.palette is mapping %}
+      {% include "partials/javascripts/palette.html" %}
+    {% endif %}
+    {% if config.extra.alternate %}
+      {% include "partials/alternate.html" %}
+    {% endif %}
+    </div>
+    <div class="basiclegal footer-righthand"><p id="copyrightlbl">Copyright ©2014-2025 Oitswilliam Pang.</p>
+        <p><a href="/licensing.html" class="">Licenses</a></p>
+    </div>
+    <div class="basiclegal footer-righthand">
+                <div class="basiclegal">
+
+                    {% if not config.extra.generator == false %}
+                      <p> Made with
+                      <a
+                        href="https://squidfunk.github.io/mkdocs-material/"
+                        target="_blank" rel="noopener"
+                      >
+                        Material for MkDocs
+                      </a></p>
+                    {% endif %}</div>
+            </div></div>
