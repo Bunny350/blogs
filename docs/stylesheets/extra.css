@@ -1,7 +1,9 @@
 @import url('./subdirectory indicator.css');
+@import url('/css/latofonts.css');
 
 :root {
     --md-text-font: Lato, Avenir, "Helvetica Neue", Helvetica, Arial, sans;
+    --x-formerly-twitter: url(/assets/x-logo-light.svg);
 }
 * {
     font-feature-settings: "pnum" on, "salt" on, "liga" off;
@@ -168,10 +170,18 @@ h1, h2, .md-typeset h1, .md-typeset h2 {
         --md-default-fg-color: rgba(128, 0, 255, 1.0);
         --md-default-fg-color--light: rgba(128, 0, 255, 1.0);
         --md-default-fg-color--lighter: rgba(128, 0, 255, 1.0);
+        --x-formerly-twitter: url(/assets/x-logo-dark.svg);
     }
 }
 
 /* below modifies the footer */
+
+div.x-sp {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    background-image: var(--x-formerly-twitter)
+}
 
 .oiwp-footer {
     z-index: 120
