@@ -9,11 +9,12 @@
     font-feature-settings: "pnum" on, "salt" on, "liga" off;
 }
 
+
+
 .md-header {
     background-color: color-mix(in srgb, var(--md-primary-fg-color) 100%, transparent 30%);
     backdrop-filter: blur(5px)
 }
-
 .md-grid.md-typeset {
   max-width: 92%;
 }
@@ -108,6 +109,10 @@ div.blog-flex div.text_content {
     .md-header__inner.md-grid .gap-notmobile {
         display: none
     }
+    
+    .md-header {
+        backdrop-filter: none
+    }
 
 }
 
@@ -129,6 +134,7 @@ ul.md-meta__list a.md-meta__link {
     padding: 0;
     margin: 0
 }
+
 .md-header__ellipsis.oiwp-blog-interface a img {
     padding-right: 12px;
 }
@@ -164,12 +170,12 @@ h1, h2, .md-typeset h1, .md-typeset h2 {
     font-weight: bold;
     margin: 0px
 }
+p {
+    font-weight: 600;
+}
 
 @media screen {
     [data-md-color-scheme=slate] {
-        --md-default-fg-color: rgba(128, 0, 255, 1.0);
-        --md-default-fg-color--light: rgba(128, 0, 255, 1.0);
-        --md-default-fg-color--lighter: rgba(128, 0, 255, 1.0);
         --x-formerly-twitter: url(/assets/x-logo-dark.svg);
     }
 }
@@ -180,11 +186,12 @@ figure.x-sp {
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
+    margin: 0px;
     background-image: var(--x-formerly-twitter)
 }
 
 .oiwp-footer {
-    z-index: 120
+    z-index: 3
 }
 
 .footer-left-nav-limiter {

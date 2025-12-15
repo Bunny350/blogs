@@ -137,7 +137,6 @@
           {% endblock %}
           <main class="md-main" data-md-component="main">
               <div class="md-main__inner md-grid">
-              {% if page.is_homepage or (("category/" in page.url) or ("archive/" in page.url) or ("page/" in page.url)) %}
                   {% block site_nav %}
                     {% if nav %}
                       {% if page.meta and page.meta.hide %}
@@ -157,7 +156,6 @@
                       </div>
                     {% endif %}
                 {% endblock %}
-            {% endif %}
               {% block container %}
                 <div class="md-content" data-md-component="content">
                   <article class="md-content__inner md-typeset">

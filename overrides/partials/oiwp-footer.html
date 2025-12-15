@@ -81,7 +81,7 @@
             const changeNavButton = document.getElementById("changeFooterNav");
             if (!mainNavUX.className.includes("matically-shown")) {
                 window.scrollTo(0, 0)
-                window.location.reload()
+                window.location.href = "/blogs"
               } else {
                   var hidingVar = new RegExp('(\\s|^)' + "matically-hidden" + '(\\s|$)');
                   blogNavUX.className = blogNavUX.className.replace(hidingVar, ' '); // from https://stackoverflow.com/questions/26736587/how-to-add-and-remove-classes-in-javascript-without-jquery but more primitive
