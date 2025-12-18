@@ -6,7 +6,7 @@
         {% endif %}
         <a class="link-wrapper" href="{{ post.url | url }}"></a>
         {% if post.meta.hero %}
-        <div class="hero-image">
+        <div class="hero-image post">
             <a href="{{ post.url | url }}">
                 <img src="{{ post.meta.hero }}" />
             </a>
@@ -44,7 +44,7 @@
                     <li class="md-meta__item">
                         {{ lang.t("blog.categories.in") }}
                         {% for category in post.categories %}
-                        <a href="{{ category.url | url }}" class="md-meta__link">
+                        <a href="{{ category.url | url }}" class="md-meta__link post">
                             {{- category.title -}}
                         </a>
                         {%- if loop.revindex > 1 %}, {% endif -%}

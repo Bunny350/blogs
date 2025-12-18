@@ -6,8 +6,11 @@ The following components that need to be changed in order to fit Oitswilliam's t
     * The top navigation has been changed to have exit button, blog home page, filter and searching. 
     * The theme chooser has moved (form the header by-default) to the footer.
     * The footer has the similar design as the normal version of Oitswilliam website.
+    * Certain adjustments are needed.
 * The base component has added "- Oitswilliam Pang" for the root page of the blog.
+* [Workaround hero image, based from mathisgauthey's idea and pvdemael's solution.](https://github.com/squidfunk/mkdocs-material/issues/6745)
+    * I add an option called show_hero_when_reading which changes whether the individual pages can show a hero image during reading.
 * The blog list page has added components that will hide the title when in root and show the description of categories.
 * The blog post component has been modified. The avatar picture has been removed, and the metadata has been moved to inside the post content, from the default lefthand bar, and the table of contents has removed due to it being unnecessary.
-* The logo image parameters has adjusted by adding the width limit of 100 pixels, and we prefer SVG on logos as always.
-* Custom lanuage strings added.
+* The logo image is modified to Oitswilliam's spec, where it allow logos made specifically in dark themes.
+* Custom language strings added. See the lang folder and the above of the strings.

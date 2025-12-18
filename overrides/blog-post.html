@@ -2,6 +2,10 @@
 {% block container %}
   <div class="md-content md-content--post" data-md-component="content">
     <article class="md-content__inner">
+        {% block heroimage %}
+          {% include "partials/blog-post-hero-image.html" %}
+        {% endblock %}
+        
       {% block metadataviewer %}
       {% include "partials/oiwp-metadata.html" %}
       {% endblock %}

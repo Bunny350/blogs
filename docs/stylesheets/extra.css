@@ -4,6 +4,7 @@
 :root {
     --md-text-font: Lato, Avenir, "Helvetica Neue", Helvetica, Arial, sans;
     --x-formerly-twitter: url(/assets/x-logo-light.svg);
+    --oitswilliam-logo: url(/blogs/assets/oitswilliam.svg);
 }
 * {
     font-feature-settings: "pnum" on, "salt" on, "liga" off;
@@ -48,10 +49,19 @@ div#blog-psa-full {
 }
 
 /* Hero image container from https://github.com/squidfunk/mkdocs-material/issues/6745 */
-.hero-image {
+.hero-image.post {
   min-width: 200px;
   max-width: 200px;
   height: 150px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 24px
+}
+
+.hero-image {
+  min-width: 200px;
+  height: 300px;
   overflow: hidden;
   position: relative;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -97,7 +107,7 @@ div.blog-flex div.text_content {
     div.blog-flex {
         flex-direction: column;
     }
-    .hero-image {
+    .hero-image.post {
         max-width: 800px;
         height: 200px;
         border-radius: 20px
@@ -124,8 +134,11 @@ a.link-wrapper {
     z-index: 1
 }
 ul.md-meta__list a.md-meta__link {
-    position: relative;
     z-index: 2
+}
+
+ul.md-meta__list a.md-meta__link.post {
+    position: relative;
 }
 
 .md-header__ellipsis.oiwp-blog-interface a {
@@ -162,7 +175,7 @@ ul.md-meta__list a.md-meta__link {
 .md-header {
     position: initial;
 }
-.md-header.sticky {
+.md-header.sticky, [data-md-toggle=search]:checked~.md-header {
     position: sticky;
 }
 
@@ -177,7 +190,18 @@ p {
 @media screen {
     [data-md-color-scheme=slate] {
         --x-formerly-twitter: url(/assets/x-logo-dark.svg);
+        --oitswilliam-logo: url(/blogs/assets/oitswilliam-whitetext.svg);
     }
+}
+
+figure.oitswilliam-logo {
+    width: 100px;
+    height: 15px;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+    margin-left: 2px;
+    background-image: var(--oitswilliam-logo);
+    background-size: contain;
 }
 
 /* below modifies the footer */
@@ -190,9 +214,11 @@ figure.x-sp {
     background-image: var(--x-formerly-twitter)
 }
 
+/*
 .oiwp-footer {
     z-index: 3
 }
+ */
 
 .footer-left-nav-limiter {
     width: 600px;
@@ -208,21 +234,23 @@ figure.x-sp {
     display: flex;
     left: 0px
 }
-
+#blog-nav.showing {
+    background-color: var(--md-default-bg-color);
+}
+#mainweb-nav, #blog-nav {
+    position: absolute;
+    transition: text-shadow 1s, color 1s, left .3s
+}
 .matically-shown {
     display: flex !important
 }
 .matically-shoved {
     left: 800px !important;
+    background-color: var(--md-default-bg-color);
 }
 .matically-hidden {
-    display: none !important
-}
-
-#mainweb-nav, #blog-nav {
-    position: absolute;
+    display: none !important;
     background-color: var(--md-default-bg-color);
-    transition: text-shadow 1s, color 1s, left .3s
 }
 
 .bottomnav.bottomnav-links {

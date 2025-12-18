@@ -39,7 +39,7 @@
                   setTimeout(function() {
                       if (!blogNavUX.className.includes("matically-hidden")) {
                       var shovingVar = new RegExp('(\\s|^)' + "matically-shoved" + '(\\s|$)');
-                      blogNavUX.className = blogNavUX.className.replace(shovingVar, ' ');
+                      blogNavUX.className = blogNavUX.className.replace(shovingVar, 'showing');
                       changeNavButton.className += " transparent";
                       console.log("blog nav moving in");
                       }
@@ -51,7 +51,9 @@
                   setTimeout(function() {
                       if (!blogNavUX.className.includes("matically-shoved") && !blogNavUX.className.includes("matically-hidden")) {
                       var showingVar = new RegExp('(\\s|^)' + "matically-shown" + '(\\s|$)');
+                      var blogBgVar = new RegExp('(\\s|^)' + "showing" + '(\\s|$)');
                       mainNavUX.className = mainNavUX.className.replace(showingVar, ' ');
+                      blogNavUX.className = blogNavUX.className.replace(blogBgVar, ' ');
                       console.log("main nav hidden");
                   } else {
                       console.log("blog nav not shoved, ignoring")
@@ -89,6 +91,7 @@
                       if (!blogNavUX.className.includes("matically-hidden")) {
                       var shovingVar = new RegExp('(\\s|^)' + "matically-shoved" + '(\\s|$)');
                       blogNavUX.className = blogNavUX.className.replace(shovingVar, ' ');
+                      blogNavUX.className = blogNavUX.className.replace(shovingVar, 'showing');
                       changeNavButton.className += " transparent";
                       console.log("blog nav moving in");
                       }
@@ -100,7 +103,9 @@
                   setTimeout(function() {
                       if (!blogNavUX.className.includes("matically-shoved") && !blogNavUX.className.includes("matically-hidden")) {
                       var showingVar = new RegExp('(\\s|^)' + "matically-shown" + '(\\s|$)');
+                      var blogBgVar = new RegExp('(\\s|^)' + "showing" + '(\\s|$)');
                       mainNavUX.className = mainNavUX.className.replace(showingVar, ' ');
+                      blogNavUX.className = blogNavUX.className.replace(blogBgVar, ' ');
                       console.log("main nav hidden");
                   } else {
                       console.log("blog nav not shoved, ignoring")
