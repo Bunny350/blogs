@@ -4,7 +4,7 @@ date:
 links:
 categories:
   - Announcement
-pinned: true
+pin: true
 tags:
   - website
   - announcements
