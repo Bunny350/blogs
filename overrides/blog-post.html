@@ -2,15 +2,63 @@
 {% block container %}
   <div class="md-content md-content--post" data-md-component="content">
     <article class="md-content__inner">
-        {% block heroimage %}
-          {% include "partials/blog-post-hero-image.html" %}
-        {% endblock %}
-        
+    {% if page.meta.hero and page.meta.show_hero_when_reading | default(true) %}
+        <div class="reading-hero-image">
+            <input type="checkbox" id="zoom-toggle" />
+            <div id="reading-hero-image-extend-layer">
+            <label for="zoom-toggle">
+            {% include "partials/blog-post-hero-image.html" %}
+            </label>
+                <div class="metadata">
+                {% block metadataviewerinhero %}
+                {% include "partials/oiwp-metadata.html" %}
+                {% include "partials/tags.html" %}
+                {% endblock %}
+                </div>
+            </div>
+            <script>
+                const rootElement = document.documentElement;
+                const rootFontSizePx = parseFloat(window.getComputedStyle(rootElement).fontSize);
+                var windowWidthEm = window.innerWidth / rootFontSizePx;
+                const secretcheckboxjkitsthelatch = document.getElementById('zoom-toggle');
+                const heroImage = document.getElementById('reading-hero-image-extend-layer');
+                function forceCollapseHero() {
+                    secretcheckboxjkitsthelatch.checked = false;
+                }
+                function checkwidth() {
+                    console.log(windowWidthEm)
+                    windowWidthEm = window.innerWidth / rootFontSizePx;
+                    if (windowWidthEm > 50 ) {
+                        secretcheckboxjkitsthelatch.disabled = false;
+                    } else {
+                        secretcheckboxjkitsthelatch.checked = false;
+                        secretcheckboxjkitsthelatch.disabled = true;
+                    }
+                }
+                checkwidth();
+                heroImage.addEventListener('mouseleave', forceCollapseHero);
+                window.addEventListener('resize', checkwidth);
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 300 && window.scrollY < 800) {
+                        forceCollapseHero()
+                        secretcheckboxjkitsthelatch.disabled = true
+                    } else if (window.scrollY < 300 && windowWidthEm > 50 ) {
+                        secretcheckboxjkitsthelatch.disabled = false
+                    }
+                })
+                
+            </script>
+        </div>
+    {% else %}
       {% block metadataviewer %}
       {% include "partials/oiwp-metadata.html" %}
       {% endblock %}
+    {% endif %}
       <span class="md-typeset">
       {% block content %}
+      {% if not (page.meta.hero and page.meta.show_hero_when_reading | default(true)) %}
+      {% include "partials/tags.html" %}
+      {% endif %}
         {% include "partials/content.html" %}
       {% endblock %}
       </span>

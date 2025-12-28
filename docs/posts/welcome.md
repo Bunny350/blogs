@@ -1,10 +1,10 @@
 ---
 date:
   created: 2025-12-21
+  updated: 2025-01-30
 links:
 categories:
   - Announcement
-pin: true
 tags:
   - website
   - announcements
@@ -33,8 +33,11 @@ The blog page will have many topics from hardware, software (which I don't often
 
 ## Accessing the blog page
 
-Right now, you can access it by entering **oitswilliam.com/blogs**, unless if our wish crushes into bunny350.github.io/blogs. Or if you are in the official website, we will add the link to blogs in media section of the website.
+You can access it by entering **oitswilliam.com/blogs**, unless if our wish crushes into bunny350.github.io/blogs. You can also access this page through the [media](https://www.oitswilliam.com/media) of the official website, where **blog** is conveniently placed on the first column of the page.
 
 ## So what are you waiting for
 
 Share this website now if you guys are interested.
+
+## Updates
+* Jan 30 2026 - Users can now access blog pages through the official website, and the post is no longer be pinned.

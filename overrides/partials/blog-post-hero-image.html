@@ -1,7 +1,13 @@
 {% if page.meta.hero and page.meta.show_hero_when_reading | default(true) %}
 
-<div class="hero-image">
+{% if page.meta.hero.endswith('.mov') or page.meta.hero.endswith('.mp4') %}
+<div class="hero-video">
+    <video loop autoplay muted playsinline style="max-width:100%" src="{{ page.meta.hero }}">
+    </video>
+    {% elif page.meta.hero.endswith('.png') or page.meta.hero.endswith('.jpg') or page.meta.hero.endswith('.jxl') or page.meta.hero.endswith('.svg') or page.meta.hero.endswith('.tiff') %}
+    <div class="hero-image">
     <img src="{{ page.meta.hero }}"></img>
+    {% endif %}
     </div>
 
 {% endif %}

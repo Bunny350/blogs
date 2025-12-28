@@ -1,0 +1,310 @@
+# Copyright ©2026 Oitswilliam Pang <yo@oitswilliam.com> ,
+# Original (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# -----------------------------------------------------------------------------
+# Configuration
+# -----------------------------------------------------------------------------
+
+# Definitions
+definitions:
+
+  # Background image
+  - &background_image >-
+    {%- if (page.meta.get("hero", page.meta.hero)) and ('mp4' not in page.meta.get("hero", page.meta.hero)) -%}
+        {{ page.meta.get("hero", page.meta.hero) | replace("/blogs/", "docs/posts/") }}
+    {%- else -%}
+        {{ layout.background_image | x }}
+    {%- endif -%}
+
+  # Background color (default: indigo)
+  - &background_color >-
+    {%- if layout.background_color -%}
+      {{ layout.background_color }}
+    {%- else -%}
+      {%- set palette = config.theme.palette or {} -%}
+      {%- if not palette is mapping -%}
+        {%- set list = palette | selectattr("primary") | list + palette -%}
+        {%- set palette = list | first -%}
+      {%- endif -%}
+      {%- set primary = palette.get("primary", "indigo") -%}
+      {%- set primary = primary.replace(" ", "-") -%}
+      {{ {
+        "red":         "#ef5552cc",
+        "pink":        "#e92063cc",
+        "purple":      "#ab47bdcc",
+        "deep-purple": "#7e56c2cc",
+        "indigo":      "#4051b5cc",
+        "blue":        "#2094f3cc",
+        "light-blue":  "#02a6f2cc",
+        "cyan":        "#00bdd6cc",
+        "teal":        "#009485cc",
+        "green":       "#4cae4fcc",
+        "light-green": "#8bc34bcc",
+        "lime":        "#cbdc38cc",
+        "yellow":      "#ffec3dcc",
+        "amber":       "#ffc105cc",
+        "orange":      "#ffa724cc",
+        "deep-orange": "#ff6e42cc",
+        "brown":       "#795649cc",
+        "grey":        "#757575cc",
+        "blue-grey":   "#546d78cc",
+        "black":       "#000000cc",
+        "white":       "#ffffffcc"
+      }[primary] or "#4051b5" }}
+    {%- endif -%}
+
+  # Text color (default: white)
+  - &color >-
+    {%- if layout.color -%}
+      {{ layout.color }}
+    {%- else -%}
+      {%- set palette = config.theme.palette or {} -%}
+      {%- if not palette is mapping -%}
+        {%- set list = palette | selectattr("primary") | list + palette -%}
+        {%- set palette = list | first -%}
+      {%- endif -%}
+      {%- set primary = palette.get("primary", "indigo") -%}
+      {%- set primary = primary.replace(" ", "-") -%}
+      {{ {
+        "red":         "#ffffff",
+        "pink":        "#ffffff",
+        "purple":      "#ffffff",
+        "deep-purple": "#ffffff",
+        "indigo":      "#ffffff",
+        "blue":        "#ffffff",
+        "light-blue":  "#ffffff",
+        "cyan":        "#ffffff",
+        "teal":        "#ffffff",
+        "green":       "#ffffff",
+        "light-green": "#ffffff",
+        "lime":        "#000000",
+        "yellow":      "#000000",
+        "amber":       "#000000",
+        "orange":      "#000000",
+        "deep-orange": "#ffffff",
+        "brown":       "#ffffff",
+        "grey":        "#ffffff",
+        "blue-grey":   "#ffffff",
+        "black":       "#ffffff",
+        "white":       "#000000"
+      }[primary] or "#ffffff" }}
+    {%- endif -%}
+
+  # Font family (default: Roboto)
+  - &font_family >-
+    {%- if layout.font_family -%}
+      {{ layout.font_family }}
+    {%- elif config.theme.font is mapping -%}
+      {{ config.theme.font.get("text", "Roboto") }}
+    {%- else -%}
+      Roboto
+    {%- endif -%}
+
+  # Font variant
+  - &font_variant >-
+    {%- if layout.font_variant -%}
+      {{ layout.font_variant }}
+    {%- endif -%}
+
+  # Site name
+  - &site_name >-
+    {{ config.site_name }}
+
+  # Page title
+  - &page_title >-
+    {%- if layout.title -%}
+      {{ layout.title }}
+    {%- elif ("archive/" in page.meta.get("url", page.url)) -%}
+    Posts created on {{ page.meta.get("title", page.title) }}
+    {%- else -%}
+      {{ page.meta.get("title", page.title) }}
+    {%- endif -%}
+
+  # Page title with site name
+  - &page_title_with_site_name >-
+    {%- if not page.is_homepage -%}
+      {{ page.meta.get("title", page.title) }} - {{ config.site_name }}
+    {%- else -%}
+      {{ config.site_name }}
+    {%- endif -%}
+    
+  # Title - if the page is not PSA, it should show "Oitswilliam Pang in..." otherwise it will show "Public service announcement". In list pages (not the posts), it will show "Oitswilliam Pang" when in the root or "Oitswilliam Pang Blog" in organized lists view.
+  - &social_title >-
+    {%- if page.meta.get("psa") -%}
+        Public service announcement
+    {%- elif (("category/" in page.meta.get("url", page.url)) or ("archive/" in page.meta.get("url", page.url))) -%}
+        Oitswilliam Pang Blog
+    {%- elif (("page/" in page.meta.get("url", page.url)) or page.is_homepage) -%}
+    Oitswilliam Pang
+    {%- else -%}
+        Oitswilliam Pang in:
+    {%- endif -%}
+
+
+  # Page description
+  - &page_description >-
+    {%- if layout.description -%}
+      {{ layout.description }}
+    {%- elif (("category/" in page.meta.get("url", page.url)) or ("archive/" in page.meta.get("url", page.url))) -%}
+    Come on, it's enjoyable!
+    {%- else -%}
+      {{ page.meta.get("description", config.site_description) | x }}
+    {%- endif -%}
+
+  # Page icon
+  - &page_icon >-
+    {%- if page.meta.icon -%}
+        {{ page.meta.icon | x }}
+    {%- endif -%}
+
+  # Logo
+  - &logo >-
+    {%- if layout.logo -%}
+      {{ layout.logo }}
+    {%- elif config.theme.logo -%}
+      {{ config.docs_dir }}/{{ config.theme.logo }}
+    {%- endif -%}
+
+  # Logo (icon)
+  - &logo_icon >-
+    {%- if not layout.logo and config.theme.icon -%}
+      {{ config.theme.icon.logo | x }}
+    {%- endif -%}
+
+# Meta tags
+tags:
+
+  # Open Graph
+  og:type: website
+  og:title: *page_title_with_site_name
+  og:description: *page_description
+  og:image: "{{ image.url }}"
+  og:image:type: "{{ image.type }}"
+  og:image:width: "{{ image.width }}"
+  og:image:height: "{{ image.height }}"
+  og:url: "{{ page.canonical_url }}"
+
+  # Twitter
+  twitter:card: summary_large_image
+  twitter:title: *page_title_with_site_name
+  twitter:description: *page_description
+  twitter:image: "{{ image.url }}"
+
+# -----------------------------------------------------------------------------
+# Specification
+# -----------------------------------------------------------------------------
+
+# Card size and layers
+size: { width: 1200, height: 630 }
+layers:
+
+  # Background
+  - background:
+      image: *background_image
+      color: *background_color
+
+  # Page icon / hero image
+  - size: { width: 700, height: 630 }
+    offset: { x: 500, y: 0 }
+    icon:
+      value: *page_icon
+      color: "#00000033"
+
+
+   # Phrase "an"
+  - size: { width: 50, height: 40 }
+    offset: { x: 520, y: 45 }
+    origin: end bottom
+    typography:
+      content: "an"
+      color: *color
+      align: start center
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+   
+   # Logo
+  - size: { width: 280, height: 40 }
+    offset: { x: 240, y: 50 }
+    origin: end bottom
+    background:
+      image: *logo
+    icon:
+      value: *logo_icon
+      color: *color
+      
+   # Phrase "Blog"
+  - size: { width: 160, height: 40 }
+    offset: { x: 70, y: 45 }
+    origin: end bottom
+    typography:
+      content: "Blog page"
+      color: *color
+      align: start center
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+    
+
+  # Title
+  - size: { width: 780, height: 42 }
+    offset: { x: 60, y: 74 }
+    typography:
+      content: *social_title
+      color: *color
+      align: start center
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+
+  # Page title
+  - size: { width: 1080, height: 300 }
+    offset: { x: 60, y: 170 }
+    typography:
+      content: *page_title
+      overflow: shrink
+      align: start center
+      color: *color
+      line:
+        amount: 3
+        height: 1.25
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Bold
+
+  # Page description
+  - size: { width: 560, height: 80 }
+    offset: { x: 60, y: 520 }
+    typography:
+      content: *page_description
+      align: start
+      color: *color
+      line:
+        amount: 2
+        height: 1.5
+      font:
+        family: *font_family
+        variant: *font_variant
+        style: Regular

@@ -49,7 +49,9 @@ plugins:
         draft: true
         draft_if_future_date: true
     - search
-    - social
+    - social:
+        cards_layout_dir: layouts
+        cards_layout: release
     - tags
 extra_css:
   - stylesheets/extra.css
