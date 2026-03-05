@@ -1,8 +1,10 @@
 ---
 date:
   created: 2026-02-20
+  updated: 2026-03-05
 categories:
   - Anything else
+  - Mods
 tags:
   - bad designs
   - material choice
@@ -67,3 +69,6 @@ Repairing electronics to me is a fascinating task, well not when being told to t
 If you don't want to repair the electronics yourselves, you can always go to their repair or service center, you can book it online, through email or phone, if the company is not garbage.
 
 Thank you for reading this log.
+
+## Updates
+* 2026-03-05: Add mods category as since I replaced the original (plastic) wheels with the SLM-printed ones, which is considered modding.

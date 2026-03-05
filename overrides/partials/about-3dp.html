@@ -1,0 +1,28 @@
+<!-- The Oitswilliam part -->
+<div style="margin: auto; max-width: 30em; margin-bottom: 1em; border-radius: 1em; background-color: #222; display: flex; flex-direction: column; box-shadow: 0px 0px 6px rgb(80,80,80); overflow: hidden">
+    <div style="color: #fff; text-align: center"><p style="text-align: center; margin: 5px">{{ lang.t("post.written.on")}}</p></div>
+    
+    <h1 style="color: #fff; text-align: center; box-shadow: 0px 0px 6px rgb(80,80,80); background-color: {{page.meta.printer_theme_color | default("#6a1816")}}; padding: 12px; width: 100%; flex-grow: 1; display: flex; align-items: center; justify-content: center">
+        <span class="twemoji" style="margin-left: 0px; margin-right: 0.4em">
+            {%  if page.meta.printer_make == 'voron' %}
+                <a href="https://www.vorondesign.com" target="_blank" alt="VORON Design" title="VORON Design">
+                {% include ".icons/printer_make/voron-stripes.svg" %}
+                </a>
+            {% endif %}
+        </span>
+        <span style="margin: 0px" title="Printer serial &nbsp;{{- page.meta.printer_serial -}}">
+            {{- page.meta.printer_serial -}}
+        </span></h1>
+    
+    <div style="color: #fff"><p style="text-align: center; margin: 5px">
+        {{lang.t("post.written.boundary")}}{% if page.meta.printer_features %}{{lang.t("blog.phrase_separator")}}{% endif %}
+        {% for printerfeat in page.meta.printer_features %}
+            {{lang.t("post.written." + printerfeat )}}{% if loop.index < loop.length - 1 %}{{lang.t("blog.phrase_separator")}}{% elif loop.index < loop.length %}{{lang.t("blog.phrase_separator")}} {{lang.t("blog.word_and")}}{% endif %}{% endfor %}{{lang.t("blog.phrase_end")}}
+        </p></div>
+    
+    <div style="color: #fff; text-align: center">
+        <p style="text-align: center; margin: 5px">
+            {{ lang.t("post.written.not_via_gen_ai")}}
+        </p></div>
+    
+    </div>

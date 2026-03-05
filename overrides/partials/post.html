@@ -36,13 +36,14 @@
                         <span class="blog-psa-title"> {{ lang.t("blog.note.public-service-announcement")}}</span>
                         </li>
                     {% endif %}
-                    <li class="md-meta__item">
-                        {% if post.authors %}
-                        {% for author in post.authors %}
-                        {{ lang.t("blog.by") }} {{ author.name }}
-                        {% endfor %}
-                        {% endif %}
-                    </li>
+                    {% if post.authors %}
+                        <li class="md-meta__item">
+                            {{ lang.t("blog.by") }}
+                            {% for author in post.authors %}
+                                {{ author.name }}
+                            {% endfor %}
+                        </li>
+                    {% endif %}
                     <li class="md-meta__item">
                         <time datetime="{{ post.config.date.created }}">
                             {{- post.config.date.created | date -}}

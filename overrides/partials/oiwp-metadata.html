@@ -2,11 +2,13 @@
   <ul class="md-meta__list">
       {% if page.authors %}
           <li class="md-meta__item">
+              {{ lang.t("blog.by") }}
               {% for author in page.authors %}
-                      {% if author.url %}
-                      {{ lang.t("blog.by") }} <a href="{{ author.url | url }}">{{ author.name }}</a>
-                      {% else %}
-                      {{ lang.t("blog.by") }} {{ author.name }}
+                      {{ author.name }}
+                      {% if loop.index < loop.length - 1 %}
+                          {{lang.t("blog.phrase_separator")}}
+                      {% elif loop.index < loop.length %}
+                          {{lang.t("blog.word_and")}}
                       {% endif %}
               {% endfor %}
           </li>

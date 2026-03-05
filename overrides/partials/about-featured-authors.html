@@ -1,0 +1,71 @@
+{% for author in page.authors | rejectattr('name', 'equalto', 'Oitswilliam Pang') %} <!-- List authors, but not Oitswilliam because that was obvious judging by the title. -->
+    <div style="max-width: 40em; min-height: 5em; margin-top: 4em; margin-bottom: 3em; margin-left: auto; margin-right: auto; position: relative">
+        {% if not 'about:blank' in author.avatar %}
+            <div style="width: 6em; height: 6em; border-radius: 2.25em; margin: auto; position: absolute; box-shadow: 0px 0px 3px rgba(80,80,80, 0.5); left: calc(50% - 3em); top: -3em">
+            <img src="{{ author.avatar | url }}" alt="Avatar image of {{ author.name }}" title="Avatar image of {{ author.name }}" style="border-radius: 2.25em;" />
+            </div>
+        {% endif %}
+        <div style="width: 100%; border-radius: 1em; text-align: center; background-color: var(--feature-panel-bg-color); 
+                {% if not 'about:blank' in author.avatar %} padding-top: 4em; {% endif %}
+                box-shadow: 0px 0px 6px rgb(80,80,80); overflow: hidden">
+            <div>
+                {{ lang.t("post.about.title") }} <span style="font-weight: 700">{{ author.name }}</span>
+            </div>
+            <div style="margin-top: .5em; margin-bottom: .5em">
+                {{ author.description }}
+            </div>
+            {% if author.social %}
+            <div style="box-shadow: 0px 0px 4px rgb(80,80,80); padding-top: 0.5em; padding-bottom: 0.5em"> {{ lang.t("post.about.person_learn_more_bfh") }} <span style="font-weight: 700">{{ author.name }}</span> {{ lang.t("post.about.person_learn_more_ah") }} </div>
+            <div style="min-height: 2em; display: flex; justify-content: center; flex-wrap: wrap">
+                {% set social = author.social %}
+                    {% if author.url and ('https://' in author.url) %} <a href="{{ author.url | url }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                        {% include ".icons/material/web.svg" %}</span>
+                        <span>
+                            <div>
+                                {% if 'site' in author.personal_web_type | default('site') %} {{ lang.t("post.about.personal_site")}}
+                                {% elif 'page' in author.personal_web_type %} {{ lang.t("post.about.personal_page")}}
+                                {% elif 'blog' in author.personal_web_type %} {{ lang.t("post.about.personal_blog")}}
+                                {% endif %}
+                            </div>
+                            <div>
+                        {% if author.personal_web_other_notes %}
+                        ({{ author.personal_web_other_notes }})
+                        {% endif %}
+                            </div>
+                        </span>
+                    </a> {% endif %}
+                    {% if 'fb_handle' in social %} <a href="https://www.facebook.com/{{ author.social.fb_handle }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/facebook.svg" %}</span>Facebook</a> {% endif %}
+                    {% if 'ig_handle' in social %} <a href="https://www.instagram.com/{{ author.social.ig_handle }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/instagram.svg" %}</span> Instagram</a> {% endif %}
+                    {% if 'is_on_threads' in social %} <a href="https://www.threads.com/{{ author.social.ig_handle }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/threads.svg" %}</span> Threads</a> {% endif %}
+                    {% if 'x_handle' in social %} <a href="https://x.com/{{ author.social.x_handle }}" title="Formerly Twitter" target="_blank" class="featured-author-link"> <span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/x.svg" %} <span style="font-size: 0.5em">({% include ".icons/fontawesome/brands/twitter.svg" %})</span>
+                        </span>X</a> {% endif %}
+                    {% if 'bsky_handle' in social %} <a href="https://bsky.app/profile/{{ author.social.bsky_handle }}" target="_blank" class="featured-author-link"> <span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/bluesky.svg" %}
+                        </span>Bluesky</a> {% endif %}
+                    {% if 'youtube_handle' in social %} <a href="https://www.youtube.com/@{{ author.social.youtube_handle }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                          {% include ".icons/simple/youtube.svg" %}</span> YouTube</a> {% endif %}
+                    
+                    {% for othersocial_id, field in author.social.other_media.items() %}
+                    <a href="{{ field.link | url }}" target="_blank" class="featured-author-link"><span class="twemoji" style="margin-right: 0.5em">
+                        {% include ".icons/material/web.svg" %}</span>{{ field.brand_name }}</a>
+                    {% endfor %}
+                    {% if not author.within_oiwp %}
+                    <span style="font-style: italic">{{ lang.t("post.about.person_not_within_oiwp") }}</span>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    {% if not 'about:blank' in author.avatar %}
+        <div> <!-- Helper - draw shadow of the box behind overall -->
+            <div style="width: 6em; height: 6em; border-radius: 2.25em; margin: auto; position: absolute; left: calc(50% - 3em); top: -3em; box-shadow: 0px 0px 6px rgb(80,80,80); z-index: -1">
+            </div>
+    </div>
+    {% endif %}
+    </div>
+  {% endfor %}
+
+<div style="font-style: italic; text-align: center"> {{ lang.t("post.about.oitswilliam") }} </div>

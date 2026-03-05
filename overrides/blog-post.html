@@ -61,6 +61,17 @@
       {% endif %}
         {% include "partials/content.html" %}
       {% endblock %}
+      {% block aboutthepost %}
+        {% if page.meta.printer_serial %}
+            {% include "partials/about-3dp.html" %}
+        {% endif %}
+        
+        <!-- Post authors -->
+        {% if page.authors | rejectattr('name', 'equalto', 'Oitswilliam Pang') | list %}
+            {% include "partials/about-featured-authors.html" %}
+        {% endif %}
+      
+      {% endblock %}
       </span>
     </article>
   </div>

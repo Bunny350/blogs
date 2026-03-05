@@ -9,8 +9,10 @@ The following components that need to be changed in order to fit Oitswilliam's t
     * Certain adjustments are needed.
 * The base component has added "- Oitswilliam Pang" for the root page of the blog.
 * [Workaround hero image, based from mathisgauthey's idea and pvdemael's solution.](https://github.com/squidfunk/mkdocs-material/issues/6745)
-    * I add an option called show_hero_when_reading which changes whether the individual pages can show a hero image during reading.
+    * I add an option called `show_hero_when_reading` which changes whether the individual pages can show a hero image during reading.
 * The blog list page has added components that will hide the title when in root and show the description of categories.
-* The blog post component has been modified. The avatar picture has been removed, and the metadata has been moved to inside the post content, from the default lefthand bar, and the table of contents has removed due to it being unnecessary.
+* The blog post component has been modified. The avatar picture in the metadata has removed, and the metadata has been moved to inside the post content, from the default lefthand bar, and the table of contents has removed due to it being unnecessary.
+    * The avatar image has moved to post-reading section, and can be hidden if the avatar link is `about:blank`.
 * The logo image is modified to Oitswilliam's spec, where it allow logos made specifically in dark themes.
-* Custom language strings added. See the lang folder and the above of the strings.
+* Custom language strings added. See the `languages` folder and the above of the strings.
+* Added about sections for both the printer and featured person, for users after reading, one for composing through the machine and one for the people (not me).
