@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-02-20
-  updated: 2026-03-05
+  updated: 2026-04-01
 categories:
   - Anything else
   - Mods
@@ -35,7 +35,7 @@ Since I am a **BANGER CAD DESIGNER,** there are two ways to create my abominatio
 
 However, since there is no bearing with specific specs that fit as rollers, might as well having know-how on doing CAD, that left me the only option: use the normal bearings and 3D print the rollers.
 <img src="/blogs/media/oven-fix/the-roller-reverse-engineered.png" alt="The roller reverse-engineered with some reserve."></img>
-This is the part, it uses two SMR74ZZ bearings, and has no spacers, which required me some M4 washers.
+This is the part, it uses two SMR74ZZ bearings, and has no spacers, which required me some M4 washers. Starting on April 1, followers can obtain such model when they have granted access to alpha-EA repository. To find out how, please message me on Facebook and Instagram.
 
 It will, again, be 3D printed, but, here's the problem: the previous thing printed via PA6GF from the current 3D printing tech we normal people still has access to, did not endure a significant heat. The oven can reach up to 230˚C, but the material can only endure up to around 180˚C, and since the roller is being contacted with the screw and that also contacted the inner chamber, it can be melted down easily. Although, we can use PPS or PEEK, but PPS and PEEK are expensive, PEEK adds where it's not what normal people use, and **I don't know what's ethical next for them,** so I did not have these.
 
@@ -71,4 +71,6 @@ If you don't want to repair the electronics yourselves, you can always go to the
 Thank you for reading this log.
 
 ## Updates
+
+* 2026-04-01: The model of the oven hinge wheel is now obtainable to the followers of Oitswilliam Pang.
 * 2026-03-05: Add mods category as since I replaced the original (plastic) wheels with the SLM-printed ones, which is considered modding.
