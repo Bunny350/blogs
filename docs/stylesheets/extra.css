@@ -1,3 +1,4 @@
+@import url('./april-1-extension.css');
 @import url('./subdirectory indicator.css');
 @import url('/css/latofonts.css');
 
@@ -9,8 +10,9 @@
 * {
     font-feature-settings: "pnum" on, "salt" on, "liga" off;
 }
-
-
+sup a.footnote-ref {
+    font-feature-settings: "salt" on, "liga" off;
+}
 
 .md-header {
     background-color: color-mix(in srgb, var(--md-primary-fg-color) 100%, transparent 30%);

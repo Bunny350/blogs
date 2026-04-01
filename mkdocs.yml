@@ -53,6 +53,12 @@ plugins:
         cards_layout_dir: layouts
         cards_layout: release
     - tags
+extra:
+  consent:
+    title: Welcome to Oitswilliam Pang's Blog!
+    description: >- 
+      Please consider following Oitswilliam Pang on Facebook and Instagram at the footer of the website, you could also get access to exclusive perks by messaging there (steps needed). Thank you.
+
 extra_css:
   - stylesheets/extra.css
 

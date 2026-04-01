@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <meta name="robots" content="noindex, nofollow" />
+{% endblock %}
+    
+{% block announce %}
+        {% include "announcement.html" %}
+{% endblock %}
+
+{% block outdated %}
+  You're not viewing the latest version.
+  <a href="{{ '../' ~ base_url }}">
+    <strong>Click here to go to latest.</strong>
+  </a>
+{% endblock %}
+
+{% block htmltitle %}
+  {% if page.meta and page.meta.title %}
+    <title>{{ page.meta.title }} - {{ config.site_name }} - Oitswilliam Pang</title>
+  {% elif page.title and not page.is_homepage %}
+    <title>{{ page.title | striptags }} - {{ config.site_name }} - Oitswilliam Pang</title>
+  {% else %}
+    <title>{{ config.site_name }} - Oitswilliam Pang</title>
+  {% endif %}
+{% endblock %}

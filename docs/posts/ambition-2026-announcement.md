@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-03-10
+  updated: 2026-03-20
 pin: true
 hero: /blogs/media/ambition-2026/hero-image.png
 categories:
@@ -33,7 +34,7 @@ I and you (the interviewee) will talk about the following topics:
 
 * Backstory,
 * Where do you / they make designs for now,
-* The rigs you / they use, including the current computer, smartphone, tablet, or even 3D printers, et cetera, It could not be said but I may embarass you if I told you that [my desktop and my printer are powerful](https://www.oitswilliam.com/rigs).
+* The rigs you / they use, including the current computer, smartphone, tablet, or even 3D printers, et cetera, It could not be said but I may embarass you if I told you that [my desktop is too powerful and my printer is a computer that's also that](https://www.oitswilliam.com/rigs).
 * Your, or the artist's stance of generative AI art,
 * The view of *the next chapter of Oitswilliam Pang*,
 * Not all topics I suggest shown. I may suggest topics outside this scope or even directly related to them.
@@ -64,9 +65,11 @@ You can choose whether Oitswilliam to interview in the following platforms, but 
 
 ## Interview dates
 
-Booking for an interview starts **now, on March 10, 2026**, and **will be closed after September 30, 2026**. I did not prepare the proper camera but If one ever joins before I will get such camera as soon as possible.
+Booking for an interview starts **now, on March 10, 2026**, and **will be closed after September 30, 2026**. I did not prepare the proper camera but If one ever joins before I will get such camera as soon as possible... nah, I have a Pocket 3 that can be made for this.
 
 The event will **start on April 10, 2026** with the **last bookable date being October 15, 2026**. Be noted that **there are dates that aren't applicable, as Oitswilliam has another ambition to do. Visit [https://www.oitswilliam.com/ambition-2026](https://www.oitswilliam.com/ambition-2026) for people willing to book, or the (invitation) PDF for up-to-date information.**
+
+By the way, when it is in interviewing days, people can book interviews starting next day, unless if it suddenly gets in high demand.
 
 It was originally going to happen on April 5 with the announcement a month prior, or actually March 5, but that isn't lucky.
 
@@ -78,9 +81,13 @@ Oitswilliam will invite the artists, but he has track record of not wanting to a
 
 And yes, the more adorable the character designer create, the more banger the industrial designer create. Maybe both, maybe either.
 
+
 ## About Oitswilliam right now
 Oitswilliam Pang (real name: Pang William) is a maker, or actually, banger CAD designer who makes projects that pushes boundaries and mostly free and open to obtain.
 
 Thanks for reading, if you are ready, visit [https://www.oitswilliam.com/ambition-2026](https://www.oitswilliam.com/ambition-2026) and start booking.
 
 Sometimes I mix up the first-person and the third-person.
+
+## Updates
+* 2026-04-01: Update the camera rig I will use, I might use DJI Osmo Pocket 3 for video interviews.
