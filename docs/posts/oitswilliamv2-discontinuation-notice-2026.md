@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-01-30
+  updated: 2026-05-01
 links:
 
 categories:
@@ -11,6 +12,7 @@ tags:
   - Voron mod
 authors:
   - oitswilliam
+pin: true
 psa: true
 ---
 
@@ -33,3 +35,6 @@ Hi everyone, this is a public service announcement regarding these deprecated mo
 - Display configuration file made for BigTreeTech Mini 12864 will stay unaffected.
 
 Thank you for understanding. If you have any other questions, you can contact me, via email, social platforms or chat groups with [links available here](https://www.oitswilliam.com/support) .
+
+## Updates
+* May 1, 2026: Pin this post, as it could affect new visitors.
