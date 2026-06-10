@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-06-08
+  updated: 2026-06-10
 hero: /blogs/media/redefine-the-experience-announcement/hero-image.jpg
 show_hero_when_reading: false
 categories:
@@ -30,4 +31,7 @@ Oitswilliam Pang will also release EXS for Voron 0 to everyone including those w
 
 *There is a [bonus live-stream](https://www.facebook.com/events/860101013259947/) just two days afterwards. It is not a proper birthday livestream if it's too easy. It is based of the popular start to finish speed-runs for the games. Don't miss it as that will make a RepRap history.*
 
-Stay tuned by [following Oitswilliam Pang in any platforms.](https://www.oitswilliam.com/media). 
+Stay tuned by [following Oitswilliam Pang in any platforms](https://www.oitswilliam.com/media). 
+
+## Updates
+* June 10, 2026: Update EXS icon to meet stroke width of other icons, fix redundant full-stop on the bottom paragraph. 
