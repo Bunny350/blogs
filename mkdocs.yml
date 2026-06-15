@@ -4,7 +4,7 @@ site_url: https://www.oitswilliam.com/blogs
 theme:
     name: material
     logo: assets/oitswilliam.svg
-    favicon: /css/oiwp-favicon.png
+    favicon: /assets/oiwp-favicon.png
     font: false
     custom_dir: overrides
     features:

@@ -69,7 +69,7 @@
     <div id="footer-right-hand">
         <div class="container-element social-links"><h2>Follow Oitswilliam Pang now on:</h2>
             {% include "partials/social_media_icons.html" %}
-            <div class="bottomnav-links">
+            <div class="footer-nav">
                 <p>Oitswilliam is always active on own Facebook account.</p>
                 <p>Join <a href="https://discord.gg/Cu6e9ra">Oitswilliam Pang Discord Server</a><br></p>
                 <a href="javascript:void(0)" onclick="forceChangeNav()"><p>View blog posts</p></a>
@@ -116,7 +116,7 @@
                 }
             </script>
         </div>
-        <div style="margin-top: 2rem">
+        <div style="margin-top: 2rem; margin-right: 8px">
             <div class="theme-chooser-relocate footer-righthand">
                 <p>Theme:</p>
                 {% if config.theme.palette %}
@@ -131,10 +131,22 @@
                 {% include "partials/alternate.html" %}
                 {% endif %}
             </div>
-            <div class="basiclegal footer-righthand"><p id="copyrightlbl">Copyright ©2014-2026 Oitswilliam Pang.</p>
-                <p><a href="/licensing.html" class="">Licenses</a></p>
-            </div>
-            <div class="basiclegal footer-righthand">
+            <div style="text-align: right">
+                <p id="copyrightlbl">Copyright ©2014-2026 Oitswilliam Pang.</p>
+
+                <script>
+                const makecurrentd = new Date();
+                let monthcheck = makecurrentd.getMonth();
+                let daycheck = makecurrentd.getDate();
+                if (daycheck == 1 && monthcheck == 3) {
+                    let currentyear = makecurrentd.getFullYear() + 2000;
+                    document.getElementById("copyrightlbl").innerHTML = "Copyright ©4014-" + currentyear + " Oitswilliam Pang.";
+                } else {
+                    let currentyear = makecurrentd.getFullYear();
+                    document.getElementById("copyrightlbl").innerHTML = "Copyright ©2014-" + currentyear + " Oitswilliam Pang.";
+                }
+                </script>
+
                 <div class="basiclegal">
                     
                     {% if not config.extra.generator == false %}
@@ -147,6 +159,7 @@
                     </a></p>
                     {% endif %}</div>
             </div>
+
         </div>
         </div>
     </div>

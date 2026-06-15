@@ -41,7 +41,7 @@ We have contained two HEPA filters in a cartridge, to filter microplastics befor
 
 ## 5010 blower-style fan, the point of the swooshing filter
 
-<img src="/blogs/media/IMG_4367.jpeg" alt="A 5010 blower-style fan in V0.2378 being exposed for everyone to see" />
+<img src="/blogs/media/exhaust-xs-released/IMG_4367.jpeg" alt="A 5010 blower-style fan in V0.2378 being exposed for everyone to see" />
 
 Exhaust XS uses 5010 blower-style dual-bearing fan, to make it different. This decision allows it to sound different, like a jet, while being powerful.
 

@@ -3,8 +3,8 @@
 
 :root {
     --md-text-font: Lato, Avenir, "Helvetica Neue", Helvetica, Arial, sans;
-    --x-formerly-twitter: url(/assets/x-logo-light.svg);
     --oitswilliam-logo: url(/blogs/assets/oitswilliam.svg);
+    --feature-panel-bg-color: #eee
 }
 * {
     font-feature-settings: "pnum" on, "salt" on, "liga" off;
@@ -296,6 +296,15 @@ a.link-wrapper {
     height: 100%;
     z-index: 1
 }
+
+a.featured-author-link {
+    display: flex;
+    align-items: center;
+    margin: 0.5em;
+    padding: 0.5em;
+    font-weight: 700
+}
+
 ul.md-meta__list a.md-meta__link {
     z-index: 2
 }
@@ -352,8 +361,8 @@ p {
 
 @media screen {
     [data-md-color-scheme=slate] {
-        --x-formerly-twitter: url(/assets/x-logo-dark.svg);
         --oitswilliam-logo: url(/blogs/assets/oitswilliam-whitetext.svg);
+        --feature-panel-bg-color: #333
     }
 }
 
@@ -369,25 +378,16 @@ figure.oitswilliam-logo {
 
 /* below modifies the footer */
 
-figure.x-sp {
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    margin: 0px;
-    background-image: var(--x-formerly-twitter)
+.matically-shown {
+    display: flex !important
 }
-
-/*
-.oiwp-footer {
-    z-index: 3
+.matically-shoved {
+    left: 800px !important;
+    background-color: var(--md-default-bg-color);
 }
- */
-
-.footer-left-nav-limiter {
-    width: 600px;
-    height: 500px;
-    position: relative;
-    overflow: hidden
+.matically-hidden {
+    display: none !important;
+    background-color: var(--md-default-bg-color);
 }
 
 #mainweb-nav {
@@ -404,27 +404,36 @@ figure.x-sp {
     position: absolute;
     transition: text-shadow 1s, color 1s, left .3s
 }
-.matically-shown {
-    display: flex !important
-}
-.matically-shoved {
-    left: 800px !important;
-    background-color: var(--md-default-bg-color);
-}
-.matically-hidden {
-    display: none !important;
-    background-color: var(--md-default-bg-color);
+
+.footer-left-nav-limiter {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden
 }
 
-.bottomnav.bottomnav-links {
-    min-width: 300px;
-    min-height: 500px
+.bottomnav.footer-nav {
+    min-width: 500px;
+    min-height: 410px
 }
 
+.footer-nav {
+    margin: 0px 12px
+}
+
+.main-links.footer-nav {
+    display: flex
+}
+
+.footer-nav a:hover, a.oiwp-announcement:hover {
+text-decoration: underline;
+}
+
+.oiwp-footer {
+    display: flex;
+    justify-content: center
+}
 .footer {
-    box-shadow: 0px 0px 8px rgb(80,80,80);
-    border-radius: 24px;
-    margin-bottom: 20px;
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
@@ -434,31 +443,23 @@ figure.x-sp {
 .footer.main {
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
-    max-width: 100%;
-    width: 1200px
+    max-width: 1200px
 }
 .footer > .bottomnav-links {
 height: 500px;
 }
-.footer-righthand {
-    width: 100%;
-position: relative !important;
-max-width: 100% !important;
-margin-right: 12px;
-left: 0px;
-}
-.bottomnav p {
-    text-align: center;
-}
+
 .social-links {
     display: flex;
     width: 400px;
     flex-wrap: wrap;
 }
 .social-media-icon:first-of-type {
-    margin-left: 32px
+    margin-left: auto
+}
+.social-media-icon:last-of-type {
+    margin-right: auto
 }
 .social-media-icon {
     margin-left: 12px;
@@ -502,7 +503,7 @@ div.navbutton-box {
     .hide-on-mobile {
         display: none
     }
-    .social-links .bottomnav-links, .social-links h2 {
+    .social-links , .social-links h2 {
         text-align: center;
         margin: 12px
     }
