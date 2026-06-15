@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-03-10
-  updated: 2026-04-01
+  updated: 2026-06-15
 pin: true
 hero: /blogs/media/ambition-2026/hero-image.png
 categories:
@@ -28,6 +28,8 @@ Oitswilliam Pang is (or I am) ready to interview the vector artists (if you are 
 
 And yes, you, or their interviews can be **featured on the blog site you're reading right now!** That is if you / they can allow it.
 
+*For the people in other professsions, stay tuned by [following Oitswilliam Pang and get notified](https://www.oitswilliam.com/media) on Facebook, Instagram or YouTube.*
+
 ## Interviewing topics
 
 I and you (the interviewee) will talk about the following topics:
@@ -40,7 +42,7 @@ I and you (the interviewee) will talk about the following topics:
 * Not all topics I suggest shown. I may suggest topics outside this scope or even directly related to them.
 * You / the interviewee can suggest their own topics that are directly related to me.
 * When making topics directly related to me, but couldn't suggest on own, try suggesting the banger design products such as [HD desiccant](https://github.com/Bunny350/HD-desiccant) or the abomination-looking battery, and [OITSWILLIAMV2](https://www.oitswilliam.com/oitswilliamv2), or even how the name **Oitswilliam Pang** was made (spoiler: beginning is a cringe / not cool to old people like me).
-* The neumorphic design, Interviewee whose booked before June 15 will have an early glimpse of such experience before followers or stalkers see.
+* Oitswilliam's makeover of UX around Mainsail.
 
 <img src="/blogs/media/ambition-2026/hd-desiccant-and-abomination-battery.jpg" />
 *Loads of HD desiccant holders printed in various materials & forms, and the abomination which is the F15 battery.*
@@ -65,9 +67,9 @@ You can choose whether Oitswilliam to interview in the following platforms, but 
 
 ## Interview dates
 
-Booking for an interview starts **now, on March 10, 2026**, and **will be closed after September 30, 2026**. I did not prepare the proper camera but If one ever joins before I will get such camera as soon as possible... nah, I have a Pocket 3 that can be made for this.
+Booking for an interview starts **now, on March 10, 2026**, ~~and **will be closed after September 30, 2026**. I did not prepare the proper camera but If one ever joins before I will get such camera as soon as possible... nah, I have a Pocket 3 that can be made for this.~~ This event now runs forever, but still the first person to meet will be earliest.
 
-The event will **start on April 10, 2026** with the **last bookable date being October 15, 2026**. Be noted that **there are dates that aren't applicable, as Oitswilliam has another ambition to do. Visit [https://www.oitswilliam.com/ambition-2026](https://www.oitswilliam.com/ambition-2026) for people willing to book, or the (invitation) PDF for up-to-date information.**
+The event will **start on April 10, 2026** ~~with the **last bookable date being October 15, 2026**~~. Be noted that **there are dates that aren't applicable, as Oitswilliam has another ambition to do. Visit [https://www.oitswilliam.com/ambition-2026](https://www.oitswilliam.com/ambition-2026) for people willing to book, or the (invitation) PDF for up-to-date information.**
 
 By the way, when it is in interviewing days, people can book interviews starting next day, unless if it suddenly gets in high demand.
 
@@ -90,4 +92,5 @@ Thanks for reading, if you are ready, visit [https://www.oitswilliam.com/ambitio
 Sometimes I mix up the first-person and the third-person.
 
 ## Updates
-* 2026-04-01: Update the camera rig I will use, I might use DJI Osmo Pocket 3 for video interviews.
+* June 15, 2026: Reveal the neumorphic makeover project. Update the end date to till further notice. Add instructions to uninvited professions that will be invited within near future.
+* April 1, 2026: Update the camera rig I will use, I might use DJI Osmo Pocket 3 for video interviews.
