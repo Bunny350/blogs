@@ -1,5 +1,5 @@
 @import url('./subdirectory indicator.css');
-@import url('/css/latofonts.css');
+@import url('/assets/latofonts.css');
 
 :root {
     --md-text-font: Lato, Avenir, "Helvetica Neue", Helvetica, Arial, sans;
