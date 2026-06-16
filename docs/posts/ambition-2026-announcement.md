@@ -79,7 +79,7 @@ It was originally going to happen on April 5 with the announcement a month prior
 
 "I like the groove, I want to interview him but I (really) do not want to bug him..." - Oitswilliam, *Ambition* featured story in Instagram
 
-Oitswilliam will invite the artists, but he has track record of not wanting to annoy them. If you want to be the first candidate, you can follow Oitswilliam Pang, and then visit Oitswilliam's support page to contact Oitswilliam through email, [Facebook](https://www.facebook.com/williampang.3363) and [Instagram](https://www.instagram.com/william86745). Messaging in other platforms are possible but Oitswilliam is no longer active there.
+Oitswilliam will invite the artists, but he has track record of not wanting to annoy them. If you want to be the first candidate, you can follow Oitswilliam Pang, and then visit Oitswilliam's support page to contact Oitswilliam through email, [Facebook](https://www.facebook.com/williampang.3363) and [Instagram](https://www.instagram.com/oitswilliam). Messaging in other platforms are possible but Oitswilliam is no longer active there.
 
 And yes, the more adorable the character designer create, the more banger the industrial designer create. Maybe both, maybe either.
 
@@ -92,5 +92,6 @@ Thanks for reading, if you are ready, visit [https://www.oitswilliam.com/ambitio
 Sometimes I mix up the first-person and the third-person.
 
 ## Updates
+* June 16, 2026: Minor change, change Oitswilliam's Instagram handle.
 * June 15, 2026: Reveal the neumorphic makeover project. Update the end date to till further notice. Add instructions to uninvited professions that will be invited within near future.
 * April 1, 2026: Update the camera rig I will use, I might use DJI Osmo Pocket 3 for video interviews.
