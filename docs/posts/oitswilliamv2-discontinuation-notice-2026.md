@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-01-30
-  updated: 2026-06-03
+  updated: 2026-06-28
 links:
 
 categories:
@@ -12,7 +12,6 @@ tags:
   - Voron mod
 authors:
   - oitswilliam
-pin: true
 psa: true
 ---
 
@@ -37,5 +36,6 @@ Hi everyone, this is a public service announcement regarding these deprecated mo
 Thank you for understanding. If you have any other questions, you can contact me, via email, social platforms or chat groups with [links available here](https://www.oitswilliam.com/support) .
 
 ## Updates
+* June 28, 2026: Un-pin issue, since this has been done two weeks after.
 * June 3, 2026: Add the link to the last commit where the deprecated features weren't been removed.
 * May 1, 2026: Pin this post, as it could affect new visitors.
