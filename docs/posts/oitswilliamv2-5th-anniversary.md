@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-06-15
+  updated: 2026-07-20
 links:
 hero: /blogs/media/oitswilliamv2-is-going-5/oitswilliamv2-is-going-5.png
 
@@ -116,6 +117,8 @@ Because we could drive graphics in real-time, we have introduced (partial) neumo
 
 ### Next generation of tracker mounts
 
+<img src="/blogs/media/oitswilliamv2-tracker.png" alt="OitswilliamV2 AirTag mount G4."></img>
+
 The next generation of tracker mounts have simplified the design again. These mounts are made from scratch, due to previous generation's unoptimized parametric design scheme. Both AirTag and Galaxy SmartTag2 mounts were updated at the same time. The mounts have stashed screw requirements to just when attaching the inner bracket to the fan mount. For SmartTag2, the mount bracket is now the nut, just to make the tracker attachment easier and removal toolless, and for AirTag, the bracket can be attached or removed without any tools.
 
 ### RealEstate G2.3
@@ -138,4 +141,7 @@ Before I unveil these to the public, I wanted to show these to some of certainly
 
 ## Looking forward
 
-The next generation of the tracker mounts were released. The NUC 12 Pro - 15 Pro skirt for Voron 2 150mm mod and RealEstate G2.3 is released today. The new Mainsail mod is now in early-access, Oitswilliam Pang Design MKDocs will be released on fall of this year. Details of Exhaust Lite G3 with the first Oitswilliam exclusive feature from Hardware will be revealed next year and will go in alpha-EA (without Oitswilliam exclusive feature) within late of this year.
+The next generation of the tracker mounts were released. The NUC 12 Pro - 15 Pro skirt for Voron 2 150mm mod and RealEstate G2.3 is released today, under [OitswilliamV2 repository](https://github.com/Bunny350/OitswilliamV2). The new Mainsail mod is now in early-access, Oitswilliam Pang Design MKDocs will be released on fall of this year. Details of Exhaust Lite G3 with the first Oitswilliam exclusive feature from Hardware will be revealed next year and will go in alpha-EA (without Oitswilliam exclusive feature) within late of this year.
+
+## Updates
+* July 20, 2026 - Add an image for the tracker mount.
