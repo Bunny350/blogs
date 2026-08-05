@@ -15,7 +15,7 @@
                 {% if post.meta.hero.endswith('.mov') or post.meta.hero.endswith('.mp4') %}
                 <video loop autoplay muted playsinline preload="none" role="img" style="min-height: 150px" src="{{ post.meta.hero }}">
                 </video>
-                {% elif post.meta.hero.endswith('.png') or post.meta.hero.endswith('.jpg') or post.meta.hero.endswith('.jxl') or post.meta.hero.endswith('.svg') or post.meta.hero.endswith('.tiff') %}
+                {% elif post.meta.hero.endswith('.png') or post.meta.hero.endswith('.jpg') or post.meta.hero.endswith('.jpeg') or post.meta.hero.endswith('.jxl') or post.meta.hero.endswith('.svg') or post.meta.hero.endswith('.tiff') %}
                 <img src="{{ post.meta.hero }}"></img>
                 {% endif %}
             </a>
