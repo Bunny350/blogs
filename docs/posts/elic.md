@@ -61,7 +61,7 @@ We are trying to deal the issue where the debug pins weren't working as expected
 
 ## Availability and requirements
 
-ELIC is now available to be tested by the followers of Oitswilliam Pang via [alpha-EA](https://www.oitswilliam/com/alpha-ea), while the bootloader software for ELIC is [available now to all users](https://github.com/Bunny350/Bootloader-firmware/blob/ELIC-G1-F070).
+ELIC is now available to be tested by the followers of Oitswilliam Pang via [alpha-EA](https://www.oitswilliam.com/alpha-ea), while the bootloader software for ELIC is [available now to all users](https://github.com/Bunny350/Bootloader-firmware/blob/ELIC-G1-F070).
 
 Integrator files of ELIC for non-followers will be available on October of this year, and the ELIC & the CAD source files will be available in Christmas December.  
 
