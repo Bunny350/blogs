@@ -1,0 +1,7 @@
+@media screen {
+    [data-md-color-scheme=slate] {
+        --md-default-fg-color: rgba(128, 0, 255, 1.0);
+        --md-default-fg-color--light: rgba(128, 0, 255, 1.0);
+        --md-default-fg-color--lighter: rgba(128, 0, 255, 1.0);
+    }
+}

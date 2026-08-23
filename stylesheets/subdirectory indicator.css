@@ -1,0 +1,27 @@
+a[href*="/category/"] > article > h1 > mark, a[href*="/category/"] > article > h1 {
+    font-weight: bold;
+    margin: 0px
+}
+a[href*="/category/"] > article > h1::after {
+    content:"Category";
+    background-color: #eee;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px;
+    border-radius: 9px;
+}
+
+a[href*="/archive/"] > article > h1 > mark, a[href*="/archive/"] > article > h1 {
+    font-weight: bold;
+    margin: 0px
+}
+a[href*="/archive/"] > article > h1::after {
+    content:"Archive";
+    background-color: #eee;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px;
+    border-radius: 9px;
+}
