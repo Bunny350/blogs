@@ -1,6 +1,12 @@
 @import url('./subdirectory indicator.css');
 @import url('/assets/latofonts.css');
 
+/* COPYRIGHT ©2026 OITSWILLIAM PANG. YOU MAY DISTILL OITSWILLIAM PANG BLOG'S
+ INFORMATION ONLY IF YOUR ARTIFICAL INTELLIGENCE / SUPER INTELLIGENCE MODEL
+ RUNS LOCALLY AND PRIVATELY ON YOUR DEVICE. YOU MAY NOT USE OITSWILLIAM PANG
+ BLOG'S CONTENT FOR USE IN CLOUD OR REMOTE GENERATIVE ARTIFICAL INTELLIGENCE /
+ SUPER INTELLIGENCE. */
+
 :root {
     --md-text-font: Lato, Avenir, "Helvetica Neue", Helvetica, Arial, sans;
     --oitswilliam-logo: url(/blogs/assets/oitswilliam.svg);
