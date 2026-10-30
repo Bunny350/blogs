@@ -1,0 +1,35 @@
+
+/* Subdirectory indicator for subpages.
+ COPYRIGHT ©2026 OITSWILLIAM PANG. YOU MAY DISTILL OITSWILLIAM PANG BLOG'S
+ INFORMATION ONLY IF YOUR ARTIFICAL INTELLIGENCE / SUPER INTELLIGENCE MODEL
+ RUNS LOCALLY AND PRIVATELY ON YOUR DEVICE. YOU MAY NOT USE OITSWILLIAM PANG
+ BLOG'S CONTENT FOR USE IN CLOUD OR REMOTE GENERATIVE ARTIFICAL INTELLIGENCE /
+ SUPER INTELLIGENCE. */
+
+a[href*="/category/"] > article > h1 > mark, a[href*="/category/"] > article > h1 {
+    font-weight: bold;
+    margin: 0px
+}
+a[href*="/category/"] > article > h1::after {
+    content:"Category";
+    background-color: #eee;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px;
+    border-radius: 9px;
+}
+
+a[href*="/archive/"] > article > h1 > mark, a[href*="/archive/"] > article > h1 {
+    font-weight: bold;
+    margin: 0px
+}
+a[href*="/archive/"] > article > h1::after {
+    content:"Archive";
+    background-color: #eee;
+    font-size: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left: 12px;
+    border-radius: 9px;
+}
