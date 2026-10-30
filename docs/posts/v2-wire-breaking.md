@@ -1,6 +1,7 @@
 ---
 date:
   created: 2026-10-24
+  updated: 2026-10-30
 hero: /blogs/media/v2-wire-breaking/IMG_2230.jpeg
 categories:
   - Hardware
@@ -59,9 +60,16 @@ I could have been used silicone wire and put them in 4\*4 array, but they are ro
 
 The first phase of it is to use the chain cable that claimed to be able to be rolled 30-million times, as the heater cable (20AWG) broke. It works, but because the chain end is popping off, I've decided against it.
 
+<img src="/blogs/media/v2-wire-breaking/IMG_5322.jpeg" alt="The PUR-insulated cable for reference. This was made for my Voron 0 until I found out the problem before it gets installed." title="The PUR-insulated cable for reference. This was made for my Voron 0 until I found out the problem before it gets installed." ></img>
+*The PUR-insulated cable for reference. This was made for my Voron 0 until I found out the problem before it gets installed.*
+
 The cable requires a larger bend radius just to properly run, but because the standard cable chain in Voron requires a smaller bend, it created tension, which was why the chain end popped off.
 
 Another reason on why I'm against it is because the 12-wire 0.25mm2 variant in conjunction with 2-wire 0.3mm2 stops fitting into the chain that V2.3347 was using properly.
+
+<img src="/blogs/media/v2-wire-breaking/IMG_5320.jpeg" alt="The strands of the one wire of the PUR-insulated cable." title="The strands of the one wire of the PUR-insulated cable." ></img>
+*The strands of the one wire of the PUR-insulated cable.*
+
 By the way, why isn't there any phases from 2023 but before 2025? Well that's because the FEP cables were probably replaced during the MCU swap before the cables broke, or maybe I did not post insane cable breaking posts before.
 
 <img src="/blogs/media/v2-wire-breaking/IMG_5264.jpeg" alt="The obscure fine-stranded PTFE wire from Mellow and Moons, with its exposed conductor strands." title="The obscure fine-stranded PTFE wire from Mellow and Moons, with its exposed conductor strands, in 24AWG."></img>
@@ -105,3 +113,6 @@ Wrapped insulation allows for denser wiring, it is, however, commonly seen in (n
 AF46R-200 will be the wire V2.3347 slowly stick on, as it has good insulation and strands, although it has the rarity of epic.
 
 I hope the wire I choose lasts forever. The progress is still ongoing, once done, I will update the post and then upload the video. Thanks for reading.
+
+## Updates
+October 30, 2026 - upload the images of the PUR-insulated wires
